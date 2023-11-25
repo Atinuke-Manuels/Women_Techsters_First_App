@@ -13,11 +13,14 @@ class MainActivity : AppCompatActivity() {
         var joinNowButton: Button = findViewById(R.id.joinNowBtn)
 
         joinNowButton.setOnClickListener{
-            // Create an Intent to navigate to the LoginActivity
+            joinNowNavigation()
+        }
+    }
+
+    private fun joinNowNavigation() {
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
 
-            // Start the LoginActivity
-            startActivity(intent)
-        }
+        // Start the LoginActivity
+        startActivity(intent)
     }
 }
